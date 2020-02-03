@@ -1,0 +1,5 @@
+downloads/*
+
+# IDE
+.idea/
+*.iml
