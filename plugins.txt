@@ -72,3 +72,5 @@ matrix-auth
 pam-auth
 ldap
 email-ext
+configuration-as-code
+configuration-as-code-support
