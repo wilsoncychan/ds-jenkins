@@ -1,3 +1,6 @@
 # Admin credentials
 ADMIN_USERNAME=admin
-ADMIN_PASSWORD=admin
+ADMIN_PASSWORD=password
+
+# App Service URL
+APP_SVC_URL=https://github.com/wilsoncychan/ds-app-svc.git
