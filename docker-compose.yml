@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  ds-jenkins:
+    hostname: jenkins.local
+    container_name: ds-jenkins
+    image: ds-jenkins:0.0.1
+    build:
+      context: .
+    env_file:
+      - ./ds-jenkins.env1
+    ports:
+      - 8080:8080
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./jenkins_home:/var/jenkins_home
+      - ./downloads:/var/jenkins_home/downloads
+      - ./jobs:/var/jenkins_home/jobs
