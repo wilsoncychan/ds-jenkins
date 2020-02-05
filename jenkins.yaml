@@ -109,6 +109,15 @@ tool:
           - zip:
               subdir: "apache-maven-3.6.3"
               url: "file:/var/jenkins_home/downloads/apache-maven-3.6.3-bin.tar.gz"
+  nodejs:
+    installations:
+    - name: "nodejs"
+      properties:
+      - installSource:
+          installers:
+          - zip:
+             subdir: "node-v12.14.1"
+             url: "file:/var/jenkins_home/downloads/node-v12.14.1-linux-x64.tar.xz"
 jobs:
   - script: >
       pipelineJob('Build App Service') {
