@@ -164,3 +164,18 @@ jobs:
               }
           }
       }
+  - script: >
+      pipelineJob('Stop and Restart RDB PSQL Container') {
+          definition {
+              cpsScm {
+                  scriptPath 'Jenkinsfile-rdb-psql-1-stop-and-restart-container'
+                  scm {
+                    git {
+                        remote { url '${APP_SVC_URL}' }
+                        branch '*/master'
+                        extensions {}
+                    }
+                  }
+              }
+          }
+      }
