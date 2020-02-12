@@ -82,3 +82,4 @@ junit-attachments
 jacoco
 tasks
 nodejs
+copyartifact
