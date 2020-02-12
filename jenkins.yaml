@@ -134,3 +134,33 @@ jobs:
               }
           }
       }
+  - script: >
+      pipelineJob('Stop and Rebuild App Service Container') {
+          definition {
+              cpsScm {
+                  scriptPath 'Jenkinsfile-app-service-1-stop-and-rebuild-container'
+                  scm {
+                    git {
+                        remote { url '${APP_SVC_URL}' }
+                        branch '*/master'
+                        extensions {}
+                    }
+                  }
+              }
+          }
+      }
+  - script: >
+      pipelineJob('Restart App Service Container') {
+          definition {
+              cpsScm {
+                  scriptPath 'Jenkinsfile-app-service-2-start-container'
+                  scm {
+                    git {
+                        remote { url '${APP_SVC_URL}' }
+                        branch '*/master'
+                        extensions {}
+                    }
+                  }
+              }
+          }
+      }
